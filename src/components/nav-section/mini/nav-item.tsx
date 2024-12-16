@@ -142,7 +142,7 @@ const StyledNavItem = styled(ListItemButton, {
   const baseStyles = {
     item: {
       borderRadius: 6,
-      color: theme.palette.text.secondary,
+      color: theme.palette.primary.contrastText,
     },
     icon: {
       width: 22,
@@ -191,10 +191,10 @@ const StyledNavItem = styled(ListItemButton, {
       },
       ...(active && {
         fontWeight: theme.typography.fontWeightBold,
-        backgroundColor: alpha(theme.palette.primary.main, 0.08),
-        color: lightMode ? theme.palette.primary.main : theme.palette.primary.light,
+        backgroundColor: theme.palette.secondary.main,
+        color: lightMode ? theme.palette.primary.contrastText : theme.palette.primary.contrastText,
         '&:hover': {
-          backgroundColor: alpha(theme.palette.primary.main, 0.16),
+          backgroundColor: alpha(theme.palette.primary.contrastText, 0.16),
         },
       }),
       ...(opened && {
@@ -231,7 +231,7 @@ const StyledNavItem = styled(ListItemButton, {
         marginRight: theme.spacing(-0.5),
       },
       ...(active && {
-        color: theme.palette.text.primary,
+        color: "red",
         backgroundColor: theme.palette.action.selected,
         fontWeight: theme.typography.fontWeightSemiBold,
       }),

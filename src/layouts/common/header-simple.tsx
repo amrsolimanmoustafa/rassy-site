@@ -44,7 +44,7 @@ export default function HeaderSimple() {
           }),
         }}
       >
-        <Logo />
+        {/* <Logo />
 
         <Stack direction="row" alignItems="center" spacing={1}>
           <SettingsButton />
@@ -52,7 +52,7 @@ export default function HeaderSimple() {
           <Link color="inherit" sx={{ typography: 'subtitle2' }}>
             Need help?
           </Link>
-        </Stack>
+        </Stack> */}
       </Toolbar>
 
       {offsetTop && <HeaderShadow />}

@@ -94,45 +94,45 @@ export default function NotificationsPopover() {
     </Stack>
   );
 
-  const renderTabs = (
-    <Tabs value={currentTab} onChange={handleChangeTab}>
-      {TABS.map((tab) => (
-        <Tab
-          key={tab.value}
-          iconPosition="end"
-          value={tab.value}
-          label={tab.label}
-          icon={
-            <Label
-              variant={((tab.value === 'all' || tab.value === currentTab) && 'filled') || 'soft'}
-              color={
-                (tab.value === 'unread' && 'info') ||
-                (tab.value === 'archived' && 'success') ||
-                'default'
-              }
-            >
-              {tab.count}
-            </Label>
-          }
-          sx={{
-            '&:not(:last-of-type)': {
-              mr: 3,
-            },
-          }}
-        />
-      ))}
-    </Tabs>
-  );
+  // const renderTabs = (
+  //   <Tabs value={currentTab} onChange={handleChangeTab}>
+  //     {TABS.map((tab) => (
+  //       <Tab
+  //         key={tab.value}
+  //         iconPosition="end"
+  //         value={tab.value}
+  //         label={tab.label}
+  //         icon={
+  //           <Label
+  //             variant={((tab.value === 'all' || tab.value === currentTab) && 'filled') || 'soft'}
+  //             color={
+  //               (tab.value === 'unread' && 'info') ||
+  //               (tab.value === 'archived' && 'success') ||
+  //               'default'
+  //             }
+  //           >
+  //             {tab.count}
+  //           </Label>
+  //         }
+  //         sx={{
+  //           '&:not(:last-of-type)': {
+  //             mr: 3,
+  //           },
+  //         }}
+  //       />
+  //     ))}
+  //   </Tabs>
+  // );
 
-  const renderList = (
-    <Scrollbar>
-      <List disablePadding>
-        {notifications.map((notification) => (
-          <NotificationItem key={notification.id} notification={notification} />
-        ))}
-      </List>
-    </Scrollbar>
-  );
+  // const renderList = (
+  //   <Scrollbar>
+  //     <List disablePadding>
+  //       {notifications.map((notification) => (
+  //         <NotificationItem key={notification.id} notification={notification} />
+  //       ))}
+  //     </List>
+  //   </Scrollbar>
+  // );
 
   return (
     <>
@@ -145,7 +145,7 @@ export default function NotificationsPopover() {
         onClick={drawer.onTrue}
       >
         <Badge badgeContent={totalUnRead} color="error">
-          <Iconify icon="solar:bell-bing-bold-duotone" width={24} />
+          <Iconify icon="ion:notifications" width={24} color="#ffffff"/>
         </Badge>
       </IconButton>
 
@@ -160,7 +160,7 @@ export default function NotificationsPopover() {
           sx: { width: 1, maxWidth: 420 },
         }}
       >
-        {renderHead}
+        {/* {renderHead}
 
         <Divider />
 
@@ -184,7 +184,7 @@ export default function NotificationsPopover() {
           <Button fullWidth size="large">
             View All
           </Button>
-        </Box>
+        </Box> */}
       </Drawer>
     </>
   );

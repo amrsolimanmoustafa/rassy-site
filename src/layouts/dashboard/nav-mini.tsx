@@ -22,6 +22,7 @@ export default function NavMini() {
   return (
     <Box
       sx={{
+        bgcolor: 'primary.main',
         flexShrink: { lg: 0 },
         width: { lg: NAV.W_MINI },
       }}
@@ -43,7 +44,7 @@ export default function NavMini() {
           ...hideScroll.x,
         }}
       >
-        <Logo sx={{ mx: 'auto', my: 2 }} />
+        <Logo sx={{ mx: 'auto', my: 2 }}  ismini={true}  />
 
         <NavSectionMini
           data={navData}

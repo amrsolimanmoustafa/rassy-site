@@ -1,4 +1,4 @@
-import { Barlow, Public_Sans } from 'next/font/google';
+import {  Public_Sans ,Kufam} from 'next/font/google';
 
 // ----------------------------------------------------------------------
 
@@ -38,7 +38,7 @@ export const primaryFont = Public_Sans({
   fallback: ['Helvetica', 'Arial', 'sans-serif'],
 });
 
-export const secondaryFont = Barlow({
+export const secondaryFont = Kufam({
   weight: ['400', '500', '600', '700', '800', '900'],
   subsets: ['latin'],
   display: 'swap',
