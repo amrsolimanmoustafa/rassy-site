@@ -17,6 +17,7 @@ import { useAuthContext } from 'src/auth/hooks';
 
 import { varHover } from 'src/components/animate';
 import CustomPopover, { usePopover } from 'src/components/custom-popover';
+import Iconify from 'src/components/iconify';
 
 // ----------------------------------------------------------------------
 
@@ -63,33 +64,8 @@ export default function AccountPopover() {
 
   return (
     <>
-      <IconButton
-        component={m.button}
-        whileTap="tap"
-        whileHover="hover"
-        variants={varHover(1.05)}
-        onClick={popover.onOpen}
-        sx={{
-          width: 40,
-          height: 40,
-          background: (theme) => alpha(theme.palette.grey[500], 0.08),
-          ...(popover.open && {
-            background: (theme) =>
-              `linear-gradient(135deg, ${theme.palette.primary.light} 0%, ${theme.palette.primary.main} 100%)`,
-          }),
-        }}
-      >
-        <Avatar
-          src={user?.photoURL}
-          alt={user?.displayName}
-          sx={{
-            width: 36,
-            height: 36,
-            border: (theme) => `solid 2px ${theme.palette.background.default}`,
-          }}
-        >
-          {user?.displayName?.charAt(0).toUpperCase()}
-        </Avatar>
+      <IconButton component={m.button} whileTap="tap" whileHover="hover" onClick={popover.onOpen}>
+        <Iconify icon="ix:user-profile-filled" color={'primary.contrastText'} width={24}/>
       </IconButton>
 
       <CustomPopover open={popover.open} onClose={popover.onClose} sx={{ width: 200, p: 0 }}>

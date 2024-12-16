@@ -61,14 +61,17 @@ const NavItem = forwardRef<HTMLDivElement, NavItemProps>(
         )}
 
         {title && (
-          <Box component="span" sx={{ flex: '1 1 auto', minWidth: 0 }}>
+          <Box
+            component="span"
+            sx={{ flex: '1 1 auto', minWidth: 0, color: 'primary.contrastText' }}
+          >
             <Box component="span" className="label">
               {title}
             </Box>
 
             {caption && (
               <Tooltip title={caption} placement="top-start">
-                <Box component="span" className="caption">
+                <Box component="span" className="caption" sx={{ color: 'primary.contrastText' }}>
                   {caption}
                 </Box>
               </Tooltip>
@@ -171,6 +174,7 @@ const StyledNavItem = styled(ListItemButton, {
       height: 24,
       flexShrink: 0,
       marginRight: theme.spacing(2),
+      color: '#FFFFFF',
     },
     label: {
       ...noWrapStyles,
@@ -218,10 +222,12 @@ const StyledNavItem = styled(ListItemButton, {
       },
       ...(active && {
         color:
-          theme.palette.mode === 'light' ? theme.palette.primary.main : theme.palette.primary.light,
-        backgroundColor: alpha(theme.palette.primary.main, 0.08),
+          theme.palette.mode === 'light'
+            ? theme.palette.primary.main
+            : theme.palette.secondary.light,
+        backgroundColor: theme.palette.secondary.main,
         '&:hover': {
-          backgroundColor: alpha(theme.palette.primary.main, 0.16),
+          backgroundColor: theme.palette.secondary.main,
         },
       }),
       ...(opened && {
@@ -253,7 +259,7 @@ const StyledNavItem = styled(ListItemButton, {
           }),
           ...(active && {
             transform: 'scale(2)',
-            backgroundColor: theme.palette.primary.main,
+            backgroundColor: theme.palette.secondary.main,
           }),
         },
       },

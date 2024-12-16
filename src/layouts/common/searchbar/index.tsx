@@ -109,10 +109,10 @@ function Searchbar() {
   const renderButton = (
     <Stack direction="row" alignItems="center">
       <IconButton onClick={search.onTrue}>
-        <Iconify icon="eva:search-fill" />
+        <Iconify icon="eva:search-fill" color={"primary.contrastText"}/>
       </IconButton>
 
-      {lgUp && <Label sx={{ px: 0.75, fontSize: 12, color: 'text.secondary' }}>⌘K</Label>}
+      {/* {lgUp && <Label sx={{ px: 0.75, fontSize: 12, color: 'primary.contrastText' }}>⌘K</Label>} */}
     </Stack>
   );
 
@@ -150,10 +150,10 @@ function Searchbar() {
             onChange={handleSearch}
             startAdornment={
               <InputAdornment position="start">
-                <Iconify icon="eva:search-fill" width={24} sx={{ color: 'text.disabled' }} />
+                <Iconify icon="eva:search-fill" width={24} sx={{ color: 'primary.contrastText' }} />
               </InputAdornment>
             }
-            endAdornment={<Label sx={{ letterSpacing: 1, color: 'text.secondary' }}>esc</Label>}
+            endAdornment={<Label sx={{ letterSpacing: 1, color: 'primary.contrastText' }}>esc</Label>}
             inputProps={{
               sx: { typography: 'h6' },
             }}

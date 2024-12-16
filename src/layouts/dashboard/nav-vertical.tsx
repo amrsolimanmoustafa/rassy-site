@@ -44,6 +44,7 @@ export default function NavVertical({ openNav, onCloseNav }: Props) {
   const renderContent = (
     <Scrollbar
       sx={{
+        bgcolor: "primary.main",
         height: 1,
         '& .simplebar-content': {
           height: 1,
@@ -62,8 +63,6 @@ export default function NavVertical({ openNav, onCloseNav }: Props) {
       />
 
       <Box sx={{ flexGrow: 1 }} />
-
-      <NavUpgrade />
     </Scrollbar>
   );
 

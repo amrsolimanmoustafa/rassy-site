@@ -1,6 +1,6 @@
 {
-  "name": "Minimal UI",
-  "short_name": "Minimal UI",
+  "name": "Al rassy",
+  "short_name": "Al rassy",
   "display": "standalone",
   "start_url": "/",
   "theme_color": "#000000",
@@ -8,12 +8,12 @@
   "icons": [
     {
       "src": "favicon/android-chrome-192x192.png",
-      "sizes": "192x192",
+      "sizes": "192x71",
       "type": "image/png"
     },
     {
       "src": "favicon/android-chrome-512x512.png",
-      "sizes": "512x512",
+      "sizes": "512x190",
       "type": "image/png"
     }
   ]
