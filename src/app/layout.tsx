@@ -1,19 +1,3 @@
-/* eslint-disable perfectionist/sort-imports */
-import 'src/global.css';
-
-// ----------------------------------------------------------------------
-
-import ThemeProvider from 'src/theme';
-import { primaryFont } from 'src/theme/typography';
-
-import ProgressBar from 'src/components/progress-bar';
-import { MotionLazy } from 'src/components/animate/motion-lazy';
-import { SettingsDrawer, SettingsProvider } from 'src/components/settings';
-
-import { AuthProvider } from 'src/auth/context/jwt';
-
-// ----------------------------------------------------------------------
-
 export const viewport = {
   themeColor: '#000000',
   width: 'device-width',
@@ -35,35 +19,6 @@ export const metadata = {
   ],
 };
 
-type Props = {
-  children: React.ReactNode;
-};
-
-export default function RootLayout({ children }: Props) {
-  return (
-    <html lang="en" className={primaryFont.className}>
-      <body>
-        <AuthProvider>
-          <SettingsProvider
-            defaultSettings={{
-              themeMode: 'light', // 'light' | 'dark'
-              themeDirection: 'ltr', //  'rtl' | 'ltr'
-              themeContrast: 'default', // 'default' | 'bold'
-              themeLayout: 'vertical', // 'vertical' | 'horizontal' | 'mini'
-              themeColorPresets: 'default', // 'default' | 'cyan' | 'purple' | 'blue' | 'orange' | 'red'
-              themeStretch: false,
-            }}
-          >
-            <ThemeProvider>
-              <MotionLazy>
-                <SettingsDrawer />
-                <ProgressBar />
-                {children}
-              </MotionLazy>
-            </ThemeProvider>
-          </SettingsProvider>
-        </AuthProvider>
-      </body>
-    </html>
-  );
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return children;
 }
