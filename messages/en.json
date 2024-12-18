@@ -1,0 +1,13 @@
+{
+  "Metadata": {
+    "title": "Al Rassy",
+    "description": "Al Rassy description",
+    "Main": {
+      "title": "Main | Al Rassy"
+    }
+  },
+  "Nav": {
+    "main": "Main",
+    "sections": "Sections"
+  }
+}
